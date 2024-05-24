@@ -3,3 +3,5 @@ This repository is dedicated to learning and improving my TCL scripting and rela
 
 > [!NOTE]
 > The [Scripts](Scripts) created during the project take inspiration from the teachings imparted by Kunal sir in his courses so they aren't the exact replica of the scripts developed by him. Throughout this course, my objective is to understand the concepts and the tasks involved and create the scripts based on my understanding. 
+
+The objective and sub-tasks division is provided in the [Objective](Objective) directory. This is a record for the procedure I adopted during the project. 
