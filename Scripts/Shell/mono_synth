@@ -1,0 +1,57 @@
+#!/bin/tcsh -f 
+
+echo "\033[33mGreetings User\!\!\033[0m"
+echo
+echo "\033[33mThis is TCL Tool box : \033[1;35mMono\033[0m\033[0m"
+echo
+echo "\033[1;35mMono\033[0m \033[33mis a simple yet powerful tool capable of taking an RTL and constraints (SDC) as inputs and convert the RTL into a gate-level netlist through Synthesis via \033[1;31mYosys\033[0m \033[33mtool"
+echo
+echo "\033[33mAdditionally she can generate a pre-layout timing report. The timing analysis is done on \033[1;31mOpenTimer\033[0m \033[33m tool.\033[0m"
+echo
+echo "\033[1;35mMono\033[0m \033[33mis more than a bunch of shell and tcl script code, Shee is your \033[1;31mreliable\033[0m \033[33mcompanion in performing synthesis and generating key reports in a nominal amount of time" 
+echo
+echo "\033[33m(Run-time is reliant heavily on design complexity)\033[0m"
+
+set my_dir = `pwd`
+
+
+# Scenario 1 : User does not provide a csv file
+if ($#argv != 1) then
+	echo "Please provide the csv file for initialisation of Mono."
+	exit 1
+endif
+
+# Scenario 2 : User provides a file that either does not exist or isn't present in the current directory and
+# Scenario 3 : User types -help after the invoking command
+if (! -e $argv[1]|| $argv[1] == -help) then
+	if ($argv[1] != "-help") then
+		echo "\033[1;31mError\033[0m encountered\! File provided : '$argv[1]' doesn't exist. Exit sequence initiated....."
+		exit 1
+		
+	else 		
+		echo -------------------------------------------------------------------------------------------------------------------------------
+		echo USAGE : Invoke command syntax -   mono_synth \<input csv file\> 
+		echo The \<input csv file\> must contain the underlined parameters for the proper execution of Mono
+		echo Design Name : Mentions the name of the design
+		echo Output Directory : Specifies the directory where you want to dump the synthesis script, synthesized netlist and timing reports
+		echo Netlist Directory : Specifies the directiory where RTL netlists are present
+		echo Early Library Path : Specifies the directiory where early library for the cells is present
+		echo Late Library Path : Specifies the directiory where early library for the cells is present
+		echo Constratints File : Specifies the path to the design constraint file
+		echo -------------------------------------------------------------------------------------------------------------------------------
+	endif
+else
+# Passing the input csv to the tcl script 
+	set csv_file = $argv[1]
+	echo
+	echo "\033[1;32mSuccess\!\033[0m $csv_file file passed to the \033[1;35mMono\033[0m tcl script successfully."
+	tclsh mono_synth.tcl $csv_file
+endif
+
+
+
+
+
+
+
+
