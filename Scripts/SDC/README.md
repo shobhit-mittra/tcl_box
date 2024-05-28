@@ -1,1 +1,1 @@
-This directory contains the constraints extracted from `open_MSP430_design_constraints.csv` (present in : [Files directory](../../Files)) and converted into SDC constraints by `mono_synth.tcl`
+This directory contains the constraints extracted from `open_MSP430_design_constraints.csv` (present in : [Files directory](../../Files)) and converted into SDC constraints by `mono_synth.tcl` This SDC is generated at the output directory as mentioned by the `mono_synth` tool.
