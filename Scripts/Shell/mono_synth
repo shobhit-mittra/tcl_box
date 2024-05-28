@@ -14,6 +14,8 @@ echo "\033[33m(Run-time is reliant heavily on design complexity)\033[0m"
 
 set my_dir = `pwd`
 
+# Setting file version of mono_synth.tcl to be used 
+set version "v1.1"
 
 # Scenario 1 : User does not provide a csv file
 if ($#argv != 1) then
@@ -45,7 +47,8 @@ else
 	set csv_file = $argv[1]
 	echo
 	echo "\033[1;32mSuccess\!\033[0m $csv_file file passed to the \033[1;35mMono\033[0m tcl script successfully."
-	tclsh mono_synth.tcl $csv_file
+	echo "The version being utilised is : $version"
+	tclsh mono_synth_${version}.tcl $csv_file
 endif
 
 
