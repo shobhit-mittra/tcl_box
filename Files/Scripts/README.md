@@ -1,0 +1,1 @@
+This directory contains the scripts provided in the course by Kunal sir. This is ismply for reference and the script developed by me varies a lot in terms of methodologies and procedures used while development
