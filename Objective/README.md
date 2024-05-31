@@ -10,7 +10,7 @@ This file demonstrated the objectives of the project and the steps to achieve it
 - A final report is generated
 
 # Sub-Tasks :
-- Create a command - vsdsynth that takes a .csv file provided as an argument and passes it to TCL script.
+- Create a command - mono_synth that takes a .csv file provided as an argument and passes it to TCL script.
 - Converting input files to a format (format[1]) which is interpreted by the Yosys tool and additionally converting input constraint csv into an SDC format.
 - Converting format[1] and SDC file into a format (format[2]) which is interpreted by OpenTimer tool
 - Generate output report
